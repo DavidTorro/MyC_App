@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { UserDto } from './dto/user.dto';
-import { User } from './entities/user.entity';
+import { User } from './user.entity';
 import { Repository } from 'typeorm';
 import { InjectRepository } from '@nestjs/typeorm';
 
@@ -25,7 +25,7 @@ export class UsersService {
         await this.userRepository.delete(id);
     }
 
-    
+
     // getUsers() {}
     // createUser(userDto: UserDto) {}
 }
