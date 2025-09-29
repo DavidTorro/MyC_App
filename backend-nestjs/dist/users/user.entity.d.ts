@@ -1,0 +1,6 @@
+import { Photo } from "src/photo/photo.entity";
+export declare class User {
+    id: number;
+    name: string;
+    photos: Photo[];
+}
