@@ -1,1 +1,18 @@
 include: package:flutter_lints/flutter.yaml
+
+analyzer:
+  exclude: 
+    - "**/*.gen.dart"
+    - "build/**"
+
+linter:
+  rules:
+    - always_use_package_imports: true
+    - prefer_single_quotes: true
+    - require_trailing_commas: true
+    - sort_child_properties_last: true
+    - use_key_in_widget_constructors: true
+    - avoid_print: true
+    - prefer_const_constructors: true
+    - prefer_final_locals: true
+    - unecessary_this: false

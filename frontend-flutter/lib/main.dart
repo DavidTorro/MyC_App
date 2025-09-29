@@ -4,8 +4,6 @@ void main() {
   runApp(const MainApp());
 }
 
-//ESTE ES UN COMENTARI DE PROVA
-// Prueba de Juan
 
 class MainApp extends StatelessWidget {
   const MainApp({super.key});
@@ -13,7 +11,12 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: Scaffold(body: Center(child: Text('Hola MUNDO :D!'))),
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        body: Center(
+          child: Text('Hola MUNDO :D!')
+        )
+      ),
     );
   }
 }
