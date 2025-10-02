@@ -13,6 +13,11 @@ export class UsersController {
         return this.usersService.findAll();
     }
 
+    @Post('users')
+    async create(@Body('user') userData: UserDto){
+        return this.usersService.create(userData);
+    }
+
 
     // @Get()
     // getUsers() {

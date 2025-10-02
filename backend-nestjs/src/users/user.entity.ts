@@ -1,17 +1,39 @@
 import { type } from "os";
+import { Comparsa } from "src/comparsa/comparsa.entity";
 import { Photo } from "src/photo/photo.entity";
-import { Entity, Column, PrimaryGeneratedColumn, OneToMany } from "typeorm";
+import { Entity, Column, PrimaryGeneratedColumn, OneToMany, ManyToOne } from "typeorm";
 
 @Entity()
 export class User {
     
     @PrimaryGeneratedColumn()
-    id: number;
+    id_user: number;
 
     @Column()
-    name: string;
+    id_comp: number
 
-    @OneToMany(() => Photo, photo => photo.user)
-    photos: Photo[];
+    @Column()
+    id_persona: number
 
+    @Column()
+    rol: number
+
+    @Column()
+    nom_user: string
+
+    @Column() 
+    pwd_user: string
+
+    @Column()
+    foto_perfil_path: string
+
+    @Column()
+    email_user: string
+
+    @ManyToOne(() => Comparsa, (comparsa) => comparsa.users)
+    comparsa : Comparsa
+    
+    // @OneToMany(() => Photo, photo => photo.user)
+    // photos: Photo[];
+    
 }
