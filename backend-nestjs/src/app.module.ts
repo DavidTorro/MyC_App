@@ -7,6 +7,7 @@ import { AppService } from './app.service';
 import { UsersModule } from './users/users.module';
 import { UsersService } from './users/users.service';
 import { PhotoModule } from './photo/photo.module';
+import { ComparsaModule } from './comparsa/comparsa.module';
 
 @Module({
   imports: [
@@ -21,7 +22,7 @@ import { PhotoModule } from './photo/photo.module';
       database: 'testNest',
       autoLoadEntities: true, //carga todas las entidades sin tener que declararlas "[]"
       synchronize: true, //only develop
-    }), PhotoModule
+    }), PhotoModule, ComparsaModule
   ],
   controllers: [AppController],
   providers: [AppService],
