@@ -1,13 +1,11 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { DataSource } from 'typeorm';
-import { User } from './users/user.entity';
+import { User } from './user/user.entity';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { UsersModule } from './users/users.module';
-import { UsersService } from './users/users.service';
-import { PhotoModule } from './photo/photo.module';
-import { ComparsaModule } from './comparsa/comparsa.module';
+import { UsersModule } from './user/users.module';
+import { UsersService } from './user/users.service';
 
 @Module({
   imports: [
@@ -22,7 +20,7 @@ import { ComparsaModule } from './comparsa/comparsa.module';
       database: 'testNest',
       autoLoadEntities: true, //carga todas las entidades sin tener que declararlas "[]"
       synchronize: true, //only develop
-    }), PhotoModule, ComparsaModule
+    }),
   ],
   controllers: [AppController],
   providers: [AppService],
