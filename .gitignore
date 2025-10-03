@@ -1,56 +1,79 @@
-# compiled output
-/dist
-/node_modules
-/build
+# --- Sistema / IDE ---
+.DS_Store
+.AppleDouble
+Icon?
+.vscode/
+.idea/
+*.iml
+*.ipr
+*.iws
 
-# Logs
-logs
+# --- Logs ---
+logs/
 *.log
 npm-debug.log*
-pnpm-debug.log*
 yarn-debug.log*
-yarn-error.log*
-lerna-debug.log*
+pnpm-debug.log*
 
-# OS
-.DS_Store
+# --- Node / NestJS (backend-nestjs) ---
+backend-nestjs/node_modules/
+backend-nestjs/dist/
+backend-nestjs/coverage/
+backend-nestjs/.env
+backend-nestjs/.env.*
+backend-nestjs/tsconfig.tsbuildinfo
+backend-nestjs/*.tsbuildinfo
+backend-nestjs/*.log
 
-# Tests
-/coverage
-/.nyc_output
+# --- Dart / Flutter (frontend-flutter) ---
+frontend-flutter/.dart_tool/
+frontend-flutter/.packages
+frontend-flutter/.flutter-plugins
+frontend-flutter/.flutter-plugins-dependencies
+frontend-flutter/.flutter_tool_state
+frontend-flutter/generated_plugin_registrant.*
 
-# IDEs and editors
-/.idea
-.project
-.classpath
-.c9/
-*.launch
-.settings/
-*.sublime-workspace
+# Flutter build outputs (scoped)
+frontend-flutter/build/
+frontend-flutter/**/build/
+frontend-flutter/.flutter-*
 
-# IDE - VSCode
-.vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
+# Android (frontend-flutter/android)
+frontend-flutter/android/.gradle/
+frontend-flutter/android/local.properties
+frontend-flutter/**/android/app/build/
+frontend-flutter/**/android/build/
 
-# dotenv environment variable files
-.env
-.env.development.local
-.env.test.local
-.env.production.local
-.env.local
+# iOS / macOS (frontend-flutter/ios, frontend-flutter/macos)
+frontend-flutter/ios/Pods/
+frontend-flutter/ios/Podfile.lock
+frontend-flutter/ios/Runner.xcworkspace/
+frontend-flutter/ios/Flutter/ephemeral/
+frontend-flutter/ios/Flutter/Flutter.framework
+frontend-flutter/macos/Pods/
+frontend-flutter/macos/Podfile.lock
+frontend-flutter/macos/Runner.xcworkspace/
+frontend-flutter/macos/Flutter/ephemeral/
 
-# temp directory
-.temp
-.tmp
+# Xcode / macOS build artifacts
+*.xcworkspace
+*.xcuserdata
+*.xcuserstate
+DerivedData/
+*.xcarchive
 
-# Runtime data
-pids
-*.pid
-*.seed
-*.pid.lock
+# Linux / Windows build outputs
+frontend-flutter/build/linux/
+frontend-flutter/build/windows/
 
-# Diagnostic reports (https://nodejs.org/api/report.html)
-report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+# Misc / generated
+generated_plugin_registrant.dart
+*.swp
+*~
+Thumbs.db
+desktop.ini
+
+# Keys / secrets
+*.key
+*.pem
+*.p12
